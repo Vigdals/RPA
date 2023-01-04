@@ -1,7 +1,8 @@
-<h3 align="center">Test of having multiple projects inside one repo</h3>
+<h3 align="center">State machine Template for Adrian</h3>
 
 ## General info
-Just a test of having many projects inside one repo
+Process will init, get casess, upload cases, rename grunnlagsdata and quit. Verify cases in Orchestrator if needed
+Start process the 2nd time and it will not find grunnlagsdata and get cases from queue and process them
 ## Related
 * [project-name](#) - Project description
 ## Maintainers
