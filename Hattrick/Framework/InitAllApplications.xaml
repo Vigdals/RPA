@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1362.4,890.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1362.4,1336</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -99,7 +99,7 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="667.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Opening Chrome Hattrick...&quot;]" />
     <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Hattrick_Credentials" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="667.2,143.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[cred_Pwd]" Username="[str_username]" />
-    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Get transfers?" sap:VirtualizedContainerService.HintSize="667.2,762.4" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://www.hattrick.org/World/Transfers/">
+    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Get transfers?" sap:VirtualizedContainerService.HintSize="667.2,762.4" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Private="True" Url="https://www.hattrick.org/World/Transfers/">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -126,7 +126,7 @@
                   <av:PointCollection x:Key="ConnectorLocation">300,210.9 300,260.9</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Open Hattrick and log in" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_17">
+              <Sequence DisplayName="Open Hattrick and log in" sap:VirtualizedContainerService.HintSize="496,1244.8" sap2010:WorkflowViewState.IdRef="Sequence_17">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="str_CurrentURL" />
                 </Sequence.Variables>
@@ -161,7 +161,7 @@
                     </ui:Target>
                   </ui:TypeSecureText.Target>
                 </ui:TypeSecureText>
-                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  ctl00_CPContent_...'" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click AlterIfDisabled="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="1500" DelayMS="1500" DisplayName="Click 'INPUT  ctl00_CPContent_...'" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
                   <ui:Click.CursorPosition>
                     <ui:CursorPosition Position="Center">
                       <ui:CursorPosition.OffsetX>
@@ -185,7 +185,7 @@
                 </ui:Click>
                 <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'editable text'" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_2">
                   <ui:GetValue.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="747c8110-5e20-4b19-bafd-9b56f0430237" InformativeScreenshot="f30e721b7e0bf62da801a44d8e7bdb14" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*Hattrick - Google Chrome' /&gt;&lt;ctrl name='*Hattrick - Google Chrome' role='pane' /&gt;&lt;ctrl name='Adresse- og søkefelt' role='editable text' /&gt;">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="747c8110-5e20-4b19-bafd-9b56f0430237" InformativeScreenshot="f30e721b7e0bf62da801a44d8e7bdb14" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*Hattrick*' /&gt;&lt;ctrl name='*Hattrick*' role='pane' /&gt;&lt;ctrl name='Adresse- og søkefelt' role='editable text' /&gt;">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>
@@ -384,6 +384,72 @@
                       </ui:SelectItem.Items>
                       <ui:SelectItem.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bfe1b3c5-2ae2-4575-a318-d8cd4fefce9c" InformativeScreenshot="983cc84913cf4880dc3df2ddcc2d5f67" Selector="&lt;html app='chrome.exe' title='Overganger » Hattrick' /&gt;&lt;webctrl tableRow='7' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SELECT' idx='3' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SelectItem.Target>
+                    </ui:SelectItem>
+                    <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Nasjonalitet" sap:VirtualizedContainerService.HintSize="387.2,156" sap2010:WorkflowViewState.IdRef="SelectItem_4" Item="Norge">
+                      <ui:SelectItem.Items>
+                        <scg:List x:TypeArguments="x:String" Capacity="50">
+                          <x:String>Alle land</x:String>
+                          <x:String>Norge</x:String>
+                          <x:String>Al Iraq</x:String>
+                          <x:String>Al Kuwayt</x:String>
+                          <x:String>Al Maghrib</x:String>
+                          <x:String>Al Urdun</x:String>
+                          <x:String>Al Yaman</x:String>
+                          <x:String>Algérie</x:String>
+                          <x:String>Andorra</x:String>
+                          <x:String>Angola</x:String>
+                          <x:String>Argentina</x:String>
+                          <x:String>Azərbaycan</x:String>
+                          <x:String>Bahrain</x:String>
+                          <x:String>Bangladesh</x:String>
+                          <x:String>Barbados</x:String>
+                          <x:String>Belarus</x:String>
+                          <x:String>Belgium</x:String>
+                          <x:String>Belize</x:String>
+                          <x:String>Bénin</x:String>
+                          <x:String>Bolivia</x:String>
+                          <x:String>Bosna i Hercegovina</x:String>
+                          <x:String>Botswana</x:String>
+                          <x:String>Brasil</x:String>
+                          <x:String>Brunei</x:String>
+                          <x:String>Bulgaria</x:String>
+                          <x:String>Burkina Faso</x:String>
+                          <x:String>Cabo Verde</x:String>
+                          <x:String>Cameroon</x:String>
+                          <x:String>Canada</x:String>
+                          <x:String>Česká republika</x:String>
+                          <x:String>Chile</x:String>
+                          <x:String>China</x:String>
+                          <x:String>Chinese Taipei</x:String>
+                          <x:String>Colombia</x:String>
+                          <x:String>Comoros</x:String>
+                          <x:String>Costa Rica</x:String>
+                          <x:String>Crna Gora</x:String>
+                          <x:String>Cuba</x:String>
+                          <x:String>Curaçao</x:String>
+                          <x:String>Cymru</x:String>
+                          <x:String>Cyprus</x:String>
+                          <x:String>Côte d’Ivoire</x:String>
+                          <x:String>Danmark</x:String>
+                          <x:String>Dawlat Qatar</x:String>
+                          <x:String>Deutschland</x:String>
+                          <x:String>Dhivehi Raajje</x:String>
+                          <x:String>Ecuador</x:String>
+                          <x:String>Eesti</x:String>
+                          <x:String>El Salvador</x:String>
+                          <x:String>England</x:String>
+                        </scg:List>
+                      </ui:SelectItem.Items>
+                      <ui:SelectItem.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bfe1b3c5-2ae2-4575-a318-d8cd4fefce9c" InformativeScreenshot="baa776675e767e65a774d3a2c0dfa341" Selector="&lt;html app='chrome.exe' title='Overganger » Hattrick' /&gt;&lt;webctrl parentid='mainBody' tag='TABLE' /&gt;&lt;webctrl tableRow='18' tag='SELECT' /&gt;">
                           <ui:Target.TimeoutMS>
                             <InArgument x:TypeArguments="x:Int32" />
                           </ui:Target.TimeoutMS>

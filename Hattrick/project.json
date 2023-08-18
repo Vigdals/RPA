@@ -1,12 +1,13 @@
 {
   "name": "HattrickChecker",
+  "projectId": "d4b969ac-ab6c-4ee2-be05-44aca5d5dcbb",
   "description": "Hattrick transfer checker",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.20.2]",
-    "UiPath.System.Activities": "[23.4.3]",
-    "UiPath.Testing.Activities": "[23.4.1]",
-    "UiPath.UIAutomation.Activities": "[23.4.6]"
+    "UiPath.Excel.Activities": "[2.22.0-preview]",
+    "UiPath.System.Activities": "[23.8.1-preview]",
+    "UiPath.Testing.Activities": "[23.8.0-preview]",
+    "UiPath.UIAutomation.Activities": "[23.6.2-preview]"
   },
   "webServices": [],
   "entitiesStores": [],
