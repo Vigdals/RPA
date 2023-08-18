@@ -53,6 +53,7 @@
       "Path": "Framework/InitAllApplications.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "str_GameWeek&Sequence_28",
         "cred_Pwd&Sequence_9",
         "str_username&Sequence_9"
       ],
@@ -68,7 +69,11 @@
       "Path": "Tests/JustTesting.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "str_CurrentURL&Sequence_4",
+        "str_FullString&Sequence_1",
+        "int_counter&Sequence_1",
+        "dt_CurrentTeamTransfers&Sequence_1",
+        "str_CurrentGW&Sequence_1",
+        "str_TeamName&Sequence_1",
         "str_CurrentURL&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
@@ -111,6 +116,8 @@
       "Path": "Framework/Process.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "str_FullString&Sequence_1",
+        "str_CurrentGW&Sequence_3",
         "dt_CurrentTeamTransfers&Sequence_3",
         "str_TeamName&Sequence_3",
         "str_URL&Sequence_3"

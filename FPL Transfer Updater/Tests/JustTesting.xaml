@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="JustTesting" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1362.4,634.4" sap2010:WorkflowViewState.IdRef="JustTesting_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="JustTesting" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1362.4,1995.2" sap2010:WorkflowViewState.IdRef="JustTesting_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -29,6 +29,18 @@
       <x:String>UiPath.UIAutomationCore.Contracts</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -76,35 +88,172 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
       <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="JustTesting" sap:VirtualizedContainerService.HintSize="496,497.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="JustTesting" sap:VirtualizedContainerService.HintSize="686.4,1930.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_CurrentURL" />
       <Variable x:TypeArguments="x:String" Name="str_TeamName" />
       <Variable x:TypeArguments="x:String" Name="str_CurrentGW" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_CurrentTeamTransfers" />
+      <Variable x:TypeArguments="x:Int32" Name="int_counter" />
+      <Variable x:TypeArguments="x:String" Name="str_FullString" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="624,489.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="3794e94b-f7ef-458f-a23a-d7b83ad56f66" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,272.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt_CurrentTeamTransfers]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Time' ReferenceName='Time' ReferenceIdx='0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='In' ReferenceName='In' ReferenceIdx='1'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Out' ReferenceName='Out' ReferenceIdx='2'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Active' ReferenceName='Active' ReferenceIdx='3'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Time' attr='fulltext' /&gt;&lt;column name='In' attr='fulltext' /&gt;&lt;column name='Out' attr='fulltext' /&gt;&lt;column name='Active' attr='fulltext' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" Version="V3">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="541, 639, 1100, 75" DesignTimeScaleFactor="1.25" FriendlyName="'TimeInOutActive14 Aug'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="b9c89069-d088-4e34-a274-73fd47769ad6" InformativeScreenshot="5a4081939a30f12f5448993868c47ed8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Fantasy Football Transfer History | Fantasy Premier League' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="eb42b309d1fbb57e7fef5cba0cf77b53.jpg" Selector="&lt;html app='chrome.exe' url='https://fantasy.premierleague.com/entry/3814446/transfers' /&gt;" Title="Fantasy Football Transfer History | Fantasy Premier League" Url="https://fantasy.premierleague.com/entry/3814446/transfers" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <Assign sap:VirtualizedContainerService.HintSize="624,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[str_CurrentGW]</OutArgument>
+        <OutArgument x:TypeArguments="x:Int32">[int_counter]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">["https://fantasy.premierleague.com/entry/5822195/event/2"]</InArgument>
+        <InArgument x:TypeArguments="x:Int32">2</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[str_CurrentGW]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[str_CurrentGW.Split("/event/")(1)]</InArgument>
-      </Assign.Value>
-    </Assign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[str_CurrentGW]" />
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="624,1167.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_CurrentTeamTransfers]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="587.2,936" sap2010:WorkflowViewState.IdRef="ForEachRow_1" MaxIterations="[Convert.ToInt32(str_CurrentGW)]">
+          <ui:ForEachRow.Body>
+            <ActivityAction x:TypeArguments="sd:DataRow">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="553.6,748" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If Condition="[CurrentRow(&quot;Active&quot;).ToString = &quot;GW2&quot;]" sap:VirtualizedContainerService.HintSize="510.4,536.8" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If.Then>
+                    <Sequence sap:VirtualizedContainerService.HintSize="476.8,353.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[str_TeamName + &quot;: &quot; + CurrentRow(&quot;In&quot;).ToString + &quot; for &quot; + CurrentRow(&quot;out&quot;).ToString]" />
+                      <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[str_FullString]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[str_FullString + vbNewLine + str_TeamName + ": " + CurrentRow("In").ToString + " for " + CurrentRow("out").ToString]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence sap:VirtualizedContainerService.HintSize="300,82.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Sequence>
+                  </If.Else>
+                </If>
+                <Assign sap:VirtualizedContainerService.HintSize="510.4,81.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Int32">[int_counter]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Int32">[int_counter+1]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </ActivityAction>
+          </ui:ForEachRow.Body>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:ForEachRow>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="590.4,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="496,497.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Ingen byte for &quot; + str_TeamName]" />
+              <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_6">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[str_FullString]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[str_FullString+ vbNewLine+"Ingen byte for " + str_TeamName]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_7">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="s:Exception">[exception]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="s:Exception">[Nothing]</InArgument>
+                </Assign.Value>
+              </Assign>
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
   </Sequence>
 </Activity>
