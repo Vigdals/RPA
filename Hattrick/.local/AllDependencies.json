@@ -11273,6 +11273,7 @@
       "path": "runtime.any.system.diagnostics.tracing/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -11431,6 +11432,7 @@
       "path": "runtime.any.system.reflection.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -18695,22 +18697,22 @@
   "projectFileDependencyGroups": {
     "": [],
     "net6.0-windows7.0": [
-      "UiPath.Excel.Activities >= 2.22.0-preview <= 2.22.0-preview",
-      "UiPath.System.Activities >= 23.8.1-preview <= 23.8.1-preview",
-      "UiPath.Testing.Activities >= 23.8.0-preview <= 23.8.0-preview",
-      "UiPath.UIAutomation.Activities >= 23.6.2-preview <= 23.6.2-preview"
+      "UiPath.Excel.Activities >= 2.22.0-preview",
+      "UiPath.System.Activities >= 23.8.1-preview",
+      "UiPath.Testing.Activities >= 23.8.0-preview",
+      "UiPath.UIAutomation.Activities >= 23.6.2-preview"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\adrvi\\.nuget\\packages\\": {}
+    "C:\\Users\\adhvi\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "HattrickChecker",
       "projectName": "HattrickChecker",
-      "projectPath": "C:\\GitRepos\\RPA\\Hattrick\\.local",
-      "packagesPath": "C:\\Users\\adrvi\\.nuget\\packages\\",
-      "outputPath": "C:\\GitRepos\\RPA\\Hattrick\\.local"
+      "projectPath": "C:\\GitHub\\RPA Privat\\RPA\\Hattrick\\.local",
+      "packagesPath": "C:\\Users\\adhvi\\.nuget\\packages\\",
+      "outputPath": "C:\\GitHub\\RPA Privat\\RPA\\Hattrick\\.local"
     },
     "frameworks": {
       "net6.0-windows7.0": {
@@ -18718,25 +18720,25 @@
           "UiPath.Excel.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[2.22.0-preview, 2.22.0-preview]"
+            "version": "[2.22.0-preview, )"
           },
           "UiPath.System.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[23.8.1-preview, 23.8.1-preview]"
+            "version": "[23.8.1-preview, )"
           },
           "UiPath.Testing.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[23.8.0-preview, 23.8.0-preview]"
+            "version": "[23.8.0-preview, )"
           },
           "UiPath.UIAutomation.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[23.6.2-preview, 23.6.2-preview]"
+            "version": "[23.6.2-preview, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\adrvi\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\UiPath\\Studio\\runtime.json"
       }
     },
     "runtimes": {

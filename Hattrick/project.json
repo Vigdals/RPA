@@ -1,6 +1,5 @@
 {
   "name": "HattrickChecker",
-  "projectId": "d4b969ac-ab6c-4ee2-be05-44aca5d5dcbb",
   "description": "Hattrick transfer checker",
   "main": "Main.xaml",
   "dependencies": {
