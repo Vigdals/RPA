@@ -69,6 +69,7 @@
       "Path": "Tests/JustTesting.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "str_somethings&Sequence_10",
         "str_FullString&Sequence_1",
         "int_counter&Sequence_1",
         "dt_CurrentTeamTransfers&Sequence_1",
@@ -116,6 +117,7 @@
       "Path": "Framework/Process.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "bool_BytterGjort&Sequence_1",
         "str_FullString&Sequence_1",
         "str_CurrentGW&Sequence_3",
         "dt_CurrentTeamTransfers&Sequence_3",
