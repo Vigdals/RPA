@@ -1,5 +1,6 @@
 {
   "name": "FPL Transfer Updater",
+  "projectId": "6c28c08e-e096-466b-921d-201fdb91784e",
   "description": "FPL Transfer Updater",
   "main": "Main.xaml",
   "dependencies": {
@@ -85,7 +86,8 @@
         "fileName": "Tests\\WorkflowTestCaseTemplate.xaml"
       }
     ],
-    "modernBehavior": false
+    "modernBehavior": false,
+    "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
