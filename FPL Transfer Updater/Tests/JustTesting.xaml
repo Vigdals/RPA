@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="JustTesting" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1362.4,2194.4" sap2010:WorkflowViewState.IdRef="JustTesting_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="JustTesting" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1362.4,2287.2" sap2010:WorkflowViewState.IdRef="JustTesting_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -109,7 +109,7 @@
       <AssemblyReference>System.CodeDom</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="654.4,2129.6" sap2010:WorkflowViewState.IdRef="Sequence_12">
+  <Sequence sap:VirtualizedContainerService.HintSize="654.4,2222.4" sap2010:WorkflowViewState.IdRef="Sequence_12">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_URL_points" />
     </Sequence.Variables>
@@ -126,13 +126,13 @@
         <InArgument x:TypeArguments="x:String">["https://fantasy.premierleague.com/entry/2222452/event/10"]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser - get wildcard, free hit and transfer DT" sap:VirtualizedContainerService.HintSize="592,1896" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="8832a7d7498c20137aaaa7fa378c9076" Selector="&lt;html app='chrome.exe' title='*Fantasy Premier*' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser - get wildcard, free hit and transfer DT" sap:VirtualizedContainerService.HintSize="592,1988.8" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="8832a7d7498c20137aaaa7fa378c9076" Selector="&lt;html app='chrome.exe' title='*Fantasy Premier*' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Check for free hit, wildcard and read transfers table" sap:VirtualizedContainerService.HintSize="558.4,1748.8" sap2010:WorkflowViewState.IdRef="Sequence_23">
+          <Sequence DisplayName="Check for free hit, wildcard and read transfers table" sap:VirtualizedContainerService.HintSize="558.4,1841.6" sap2010:WorkflowViewState.IdRef="Sequence_23">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -140,7 +140,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="496,85.6" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[str_URL_points]" />
-            <Sequence DisplayName="Get kaftein" sap:VirtualizedContainerService.HintSize="496,1511.2" sap2010:WorkflowViewState.IdRef="Sequence_22">
+            <Sequence DisplayName="Get kaftein" sap:VirtualizedContainerService.HintSize="496,1604" sap2010:WorkflowViewState.IdRef="Sequence_22">
               <Sequence.Variables>
                 <Variable x:TypeArguments="ui:UiElement" Name="UiElement_Kaptein" />
                 <Variable x:TypeArguments="x:String" Name="str_KapteinTabellRad" />
@@ -187,9 +187,38 @@
               </ui:ExtractData>
               <ui:OutputDataTable DataTable="[dt_players]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="433.6,80.8" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[outputs]" />
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[outputs]" />
-              <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'TD'" FoundElement="[UiElement_Kaptein]" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="433.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,219.2" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'TD'" FoundElement="[UiElement_Kaptein]" sap:VirtualizedContainerService.HintSize="387.2,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+                      <ui:WaitUiElementAppear.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9a9e4656-48d6-40cc-9722-f1fe8ddfe4dd" InformativeScreenshot="f7268d04cd2b7966b21099f5de1aab23" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='*' tag='TD' innertext='Captain' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:WaitUiElementAppear.Target>
+                    </ui:WaitUiElementAppear>
+                  </Sequence>
+                </ui:CommentOut.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:CommentOut>
+              <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element correct kaptain" FoundElement="[UiElement_Kaptein]" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
                 <ui:WaitUiElementAppear.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9a9e4656-48d6-40cc-9722-f1fe8ddfe4dd" InformativeScreenshot="f7268d04cd2b7966b21099f5de1aab23" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='*' tag='TD' innertext='Captain' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9a9e4656-48d6-40cc-9722-f1fe8ddfe4dd" InformativeScreenshot="f5f3ba933b40eac42a21072f4a897c3a" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aria-role='img' parentid='root' tableCol='2' tableRow='*' tag='svg' class='TableCaptains__StyledCaptain*' /&gt;&lt;webctrl tableCol='2' tableRow='*' tag='path' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
