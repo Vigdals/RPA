@@ -133,7 +133,7 @@
         <OutArgument x:TypeArguments="x:String">[str_FullString]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">["Hallo. Dette er botten til Andrian. Her kjem lag som har bytta denna veka. I rekkefølgja til tabellen vår, sjølvsagt." + vbNewLine]</InArgument>
+        <InArgument x:TypeArguments="x:String">["Hallo. No med kapteinar. Hei" + vbNewLine]</InArgument>
       </Assign.Value>
     </Assign>
     <uix:NApplicationCard AttachMode="ByInstance" DisplayName="For kvart lag" sap:VirtualizedContainerService.HintSize="656,3091.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" IsIncognito="False" ScopeGuid="3794e94b-f7ef-458f-a23a-d7b83ad56f66" Version="V2">
@@ -142,13 +142,13 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_LeagueTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="668.8,4213.6" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_LeagueTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="622.4,2874.4" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="635.2,4025.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="588.8,2686.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="str_URL_transfers" />
                     <Variable x:TypeArguments="x:String" Name="str_TeamName" />
@@ -163,7 +163,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="592,81.6" sap2010:WorkflowViewState.IdRef="Assign_24">
+                  <Assign sap:VirtualizedContainerService.HintSize="545.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_24">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Boolean">[bool_BytterGjort]</OutArgument>
                     </Assign.To>
@@ -171,7 +171,7 @@
                       <InArgument x:TypeArguments="x:Boolean">False</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="592,81.6" sap2010:WorkflowViewState.IdRef="Assign_34">
+                  <Assign sap:VirtualizedContainerService.HintSize="545.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_34">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Boolean">[bool_FreeHit]</OutArgument>
                     </Assign.To>
@@ -179,7 +179,7 @@
                       <InArgument x:TypeArguments="x:Boolean">False</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="592,81.6" sap2010:WorkflowViewState.IdRef="Assign_23">
+                  <Assign sap:VirtualizedContainerService.HintSize="545.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_23">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Boolean">[bool_Wildcard]</OutArgument>
                     </Assign.To>
@@ -187,7 +187,7 @@
                       <InArgument x:TypeArguments="x:Boolean">False</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="592,81.6" sap2010:WorkflowViewState.IdRef="Assign_12">
+                  <Assign sap:VirtualizedContainerService.HintSize="545.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_12">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[str_TeamName]</OutArgument>
                     </Assign.To>
@@ -195,7 +195,7 @@
                       <InArgument x:TypeArguments="x:String">[CurrentRow("Team &amp; Manager").ToString.Replace("@","")]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="592,83.2" sap2010:WorkflowViewState.IdRef="Assign_7">
+                  <Assign sap:VirtualizedContainerService.HintSize="545.6,83.2" sap2010:WorkflowViewState.IdRef="Assign_7">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[str_TeamName]</OutArgument>
                     </Assign.To>
@@ -204,7 +204,7 @@
 "))]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="592,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <Assign sap:VirtualizedContainerService.HintSize="545.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[str_URL_transfers]</OutArgument>
                     </Assign.To>
@@ -212,7 +212,7 @@
                       <InArgument x:TypeArguments="x:String">[CurrentRow("Team &amp; Manager Url").ToString]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="592,81.6" sap2010:WorkflowViewState.IdRef="Assign_9">
+                  <Assign sap:VirtualizedContainerService.HintSize="545.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_9">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[str_CurrentGW]</OutArgument>
                     </Assign.To>
@@ -220,7 +220,7 @@
                       <InArgument x:TypeArguments="x:String">[str_URL_transfers.Split("/event/")(1)]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="592,81.6" sap2010:WorkflowViewState.IdRef="Assign_22">
+                  <Assign sap:VirtualizedContainerService.HintSize="545.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_22">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[str_URL_points]</OutArgument>
                     </Assign.To>
@@ -228,7 +228,7 @@
                       <InArgument x:TypeArguments="x:String">[str_URL_transfers.Substring(0, str_URL_transfers.IndexOf("/event/")) + "/event/" +str_CurrentGW]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="592,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                  <Assign sap:VirtualizedContainerService.HintSize="545.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[str_URL_transfers]</OutArgument>
                     </Assign.To>
@@ -236,21 +236,21 @@
                       <InArgument x:TypeArguments="x:String">[str_URL_transfers.Substring(0, str_URL_transfers.IndexOf("/event/")) + "/transfers"]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser - get wildcard, free hit and transfer DT" sap:VirtualizedContainerService.HintSize="592,2610.4" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="8832a7d7498c20137aaaa7fa378c9076" Selector="&lt;html app='chrome.exe' title='*Fantasy Premier*' /&gt;">
+                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser - get wildcard, free hit and transfer DT" sap:VirtualizedContainerService.HintSize="545.6,1271.2" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="8832a7d7498c20137aaaa7fa378c9076" Selector="&lt;html app='chrome.exe' title='*Fantasy Premier*' /&gt;">
                     <ui:BrowserScope.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Check for free hit, wildcard and read transfers table" sap:VirtualizedContainerService.HintSize="558.4,2463.2" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                        <Sequence DisplayName="Check for free hit, wildcard and read transfers table" sap:VirtualizedContainerService.HintSize="512,1124" sap2010:WorkflowViewState.IdRef="Sequence_20">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="496,85.6" sap2010:WorkflowViewState.IdRef="NavigateTo_4" Url="[str_URL_points]" />
-                          <Sequence DisplayName="Get kaftein" sap:VirtualizedContainerService.HintSize="496,1422.4" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                          <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="449.6,85.6" sap2010:WorkflowViewState.IdRef="NavigateTo_4" Url="[str_URL_points]" />
+                          <Sequence DisplayName="Get kaftein" sap:VirtualizedContainerService.HintSize="449.6,83.2" sap2010:WorkflowViewState.IdRef="Sequence_41">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="ui:UiElement" Name="UiElement_Kaptein" />
                               <Variable x:TypeArguments="x:String" Name="str_KapteinTabellRad" />
@@ -261,7 +261,7 @@
                             </Sequence.Variables>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
@@ -393,7 +393,7 @@
                               </ui:Click.Target>
                             </ui:Click>
                           </Sequence>
-                          <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[bool_Wildcard]" sap:VirtualizedContainerService.HintSize="496,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                          <ui:UiElementExists DisplayName="Wildcard Exsists" Exists="[bool_Wildcard]" sap:VirtualizedContainerService.HintSize="449.6,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                             <ui:UiElementExists.Target>
                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cd2e4bcf-aa38-4170-9631-60e38508f1ab" InformativeScreenshot="48f727fb13f665ed44d4737cf55aa1c8" Selector="&lt;webctrl aaname='Wildcard played' parentid='root' tag='DIV' /&gt;" TimeoutMS="1000">
                                 <ui:Target.WaitForReady>
@@ -408,7 +408,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:UiElementExists>
-                          <If Condition="[bool_Wildcard]" sap:VirtualizedContainerService.HintSize="496,52.8" sap2010:WorkflowViewState.IdRef="If_6">
+                          <If Condition="[bool_Wildcard]" sap:VirtualizedContainerService.HintSize="449.6,52.8" sap2010:WorkflowViewState.IdRef="If_6">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -437,7 +437,7 @@
                               <Sequence sap2010:WorkflowViewState.IdRef="Sequence_28" />
                             </If.Else>
                           </If>
-                          <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[bool_FreeHit]" sap:VirtualizedContainerService.HintSize="496,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                          <ui:UiElementExists DisplayName="Free hit exsists" Exists="[bool_FreeHit]" sap:VirtualizedContainerService.HintSize="449.6,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
                             <ui:UiElementExists.Target>
                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7232fbe3-b07e-4259-9871-61f596bb06f3" InformativeScreenshot="8f44d1faa7e8856bff59a5bd10a4c5b7" Selector="&lt;webctrl aaname='Free Hit played' parentid='root' tag='DIV' /&gt;" TimeoutMS="1000">
                                 <ui:Target.WaitForReady>
@@ -446,7 +446,7 @@
                               </ui:Target>
                             </ui:UiElementExists.Target>
                           </ui:UiElementExists>
-                          <If Condition="[bool_FreeHit]" sap:VirtualizedContainerService.HintSize="496,52.8" sap2010:WorkflowViewState.IdRef="If_5">
+                          <If Condition="[bool_FreeHit]" sap:VirtualizedContainerService.HintSize="449.6,52.8" sap2010:WorkflowViewState.IdRef="If_5">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -475,8 +475,8 @@
                               <Sequence sap2010:WorkflowViewState.IdRef="Sequence_26" />
                             </If.Else>
                           </If>
-                          <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="496,85.6" sap2010:WorkflowViewState.IdRef="NavigateTo_3" Url="[str_URL_transfers]" />
-                          <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt_CurrentTeamTransfers]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Time' ReferenceName='Time' ReferenceIdx='0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='In' ReferenceName='In' ReferenceIdx='1'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Out' ReferenceName='Out' ReferenceIdx='2'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Active' ReferenceName='Active' ReferenceIdx='3'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Time' attr='fulltext' /&gt;&lt;column name='In' attr='fulltext' /&gt;&lt;column name='Out' attr='fulltext' /&gt;&lt;column name='Active' attr='fulltext' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="496,157.6" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" Version="V3">
+                          <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To transfers" sap:VirtualizedContainerService.HintSize="449.6,85.6" sap2010:WorkflowViewState.IdRef="NavigateTo_3" Url="[str_URL_transfers]" />
+                          <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt_CurrentTeamTransfers]" DisplayName="Extract Transfers Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Time' ReferenceName='Time' ReferenceIdx='0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='In' ReferenceName='In' ReferenceIdx='1'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Out' ReferenceName='Out' ReferenceIdx='2'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Active' ReferenceName='Active' ReferenceIdx='3'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Time' attr='fulltext' /&gt;&lt;column name='In' attr='fulltext' /&gt;&lt;column name='Out' attr='fulltext' /&gt;&lt;column name='Active' attr='fulltext' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="449.6,157.6" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" Version="V3">
                             <uix:NExtractData.Target>
                               <uix:TargetAnchorable DesignTimeRectangle="541, 639, 1100, 75" DesignTimeScaleFactor="1.25" FriendlyName="'TimeInOutActive14 Aug'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="b9c89069-d088-4e34-a274-73fd47769ad6" InformativeScreenshot="5a4081939a30f12f5448993868c47ed8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Fantasy Football Transfer History | Fantasy Premier League' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                             </uix:NExtractData.Target>
@@ -491,7 +491,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:BrowserScope>
-                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Sjekker om bytter er gjort for current GW" DataTable="[dt_CurrentTeamTransfers]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="592,96.8" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Sjekker om bytter er gjort for current GW" DataTable="[dt_CurrentTeamTransfers]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="545.6,96.8" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
                     <ui:ForEachRow.Body>
                       <ActivityAction x:TypeArguments="sd:DataRow">
                         <ActivityAction.Argument>
@@ -552,7 +552,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:ForEachRow>
-                  <If Condition="[bool_BytterGjort = False]" DisplayName="If bytter gjort is False" sap:VirtualizedContainerService.HintSize="664,1768.8" sap2010:WorkflowViewState.IdRef="If_9">
+                  <If Condition="[bool_BytterGjort = False]" DisplayName="If bytter gjort is False" sap:VirtualizedContainerService.HintSize="545.6,52.8" sap2010:WorkflowViewState.IdRef="If_9">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
