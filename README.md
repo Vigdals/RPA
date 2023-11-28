@@ -1,7 +1,7 @@
-<h3 align="center">Test of having multiple projects inside one repo</h3>
+<h3 align="center">RPA for Vigdals  </h3>
 
 ## General info
-Just a test of having many projects inside one repo
+Many rpa processes inside one repo
 ## Related
 * [project-name](#) - Project description
 ## Maintainers
